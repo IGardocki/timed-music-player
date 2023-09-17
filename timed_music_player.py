@@ -18,7 +18,8 @@ if __name__ == "__main__":
     os.chdir(script_dir)
 
     # Schedule the job to run
-    schedule.every().day.at("23:36").do(job)
+    schedule.every().day.at("08:51").do(job) # runs at 851 all days 
+    schedule.every().thursday.at("09:21").do(job) # runs at 921 on thursday
 
     while True:
         schedule.run_pending()
